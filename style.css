@@ -1,0 +1,222 @@
+/* Global styles for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+/* Body styles for overall layout */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+/* Styles for the main container */
+.container {
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 600px;
+    width: 540px;
+    position: relative; /* Add position relative to create stacking context */
+  }
+  
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('login_page_background.jpg');
+    background-size: cover;
+    filter: blur(0.8px); /* Adjust the blur radius as needed */
+    z-index: -1; /* Place it behind the content */
+    border-radius: 4%;
+  }
+  
+  /* Rest of your container styles */
+  
+
+/* Styles for the cross button */
+#cross button {
+
+    /* Styles for the cross icon inside the button */
+    #crosspic {
+        height: 12px;
+    }
+
+    padding: 0px;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+    top: 20px;
+    right: 240px;
+}
+
+/* Styles for the logo */
+#logo {
+    height: 15px;
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+/* Styles for the sign-in heading */
+#sign {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    padding-top: 40px;
+    text-align: left;
+    width: 245px;
+}
+
+/* Styles for the Google sign-in button */
+#google button {
+
+    /* Styles for the Google icon inside the button */
+    #googlepic {
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    height: 35px;
+    width: 270px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: small;
+    margin-bottom: 19px;
+    font-weight: 100px;
+}
+
+/* Styles for the Apple sign-in button */
+#apple button {
+
+    /* Styles for the Apple icon inside the button */
+    #applepic {
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    height: 35px;
+    width: 270px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    font: grey;
+    font-size: small;
+}
+
+/* Styles for the "or" section */
+#or {
+
+    /* Styles for the grey lines in the "or" section */
+    #greyline {
+        padding-top: 19px;
+        height: 35px;
+        width: 120px;
+    }
+
+    color: white;
+    font-size: larger;
+    margin-bottom: 1px;
+    height: 40px;
+    width: 270px;
+}
+
+/* Styles for the email input */
+#email input {
+    margin: 10px;
+    margin-bottom: 20px;
+    border: rgb(255, 255, 255) 1px solid;
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    width: 270px;
+    color: black;
+    border-radius: 10px;
+}
+
+/* Styles for the Next button */
+#next button {
+    cursor: pointer;
+    background-color: white;
+    height: 35px;
+    width: 270px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.5%;
+    margin-bottom: 5%;
+    font-size: small;
+}
+
+/* Styles for the Forgot Password button */
+#forgot button {
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    height: 35px;
+    width: 270px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1.5%;
+    font-size: small;
+}
+
+/* Styles for the "Don't have an account" link */
+#up {
+    margin: 60px;
+    color: white;
+    text-align: left;
+    width: 260px;
+}
+
+/* Media Query for screens with a maximum width of 688 pixels */
+@media (max-width: 688px) {
+    /* Styles for smaller screens */
+
+    /* Adjustments for the main container */
+    .container {
+        padding: 0px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        overflow: scroll;
+        border-radius: 0px;
+    }
+
+    /* Adjustments for the logo on smaller screens */
+    #logo {
+        margin-bottom: 14vh;
+    }
+
+    /* Adjustments for the cross button's position on smaller screens */
+    #cross {
+        position: absolute;
+        top: 1em;
+        left: 0.5em;
+    }
+
+    #cross button {
+        position: absolute;
+        top: 0;
+        left: inherit;
+    }
+}
